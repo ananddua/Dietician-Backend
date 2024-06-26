@@ -4,7 +4,7 @@
   "description": "This is the backend for dietician project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
     "dev": "node index.js"
   },
   "author": "Yogesh Sharma",
