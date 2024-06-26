@@ -114,12 +114,14 @@ router.post('/uploadpic', async (req, res) => {
 });
 router.post('/getUsersPic', async (req, res) => {
     try {
+        console.log("hiting getUserPic")
         const {email} = req.body; 
         console.log(req.body);
-        const userImage=await Progress.findOne({User:email})
+        const userImage=await Progress.findOne({user:email})
+        console.log("user image is", (userImage) ? userImage.images : []);
         res.json({
             success: true,
-            data: userImage.images
+            data:  (userImage) ? userImage.images : []             
         });
     } catch (error) {
         console.error(error);
