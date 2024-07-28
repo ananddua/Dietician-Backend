@@ -13,6 +13,27 @@ router.post('/addMeal',async(req,res)=>{
 
 });
 
+router.patch('/editMeal/:id',async(req,res)=>{
+    const mealId = req.params.id;
+    const updatedMeal = req?.body;
+    if(!mealId){
+        res.status(400).json({
+            message:"path param not available"
+        })
+    }
+    else if(!updatedMeal){
+        res.status(400).json({
+            message:"payload not available"
+        })
+    }else{
+        await Meal.findOneAndUpdate({_id: mealId},{...updatedMeal});
+        res.json({
+            success:true,
+            message:"meal data is updated"
+        })
+    }
+});
+
 router.get('/getMeal', async(req,res)=>{
         const allMeal = await Meal.find({}).exec();
         res.json({
