@@ -7,7 +7,11 @@
     "start": "node index.js",
     "dev": "node index.js"
   },
-  "author": "anand dua",
+  "authors": {
+    "aman kapoor",
+    "harshit ahuja",
+    "anand dua"
+  },
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.6",
