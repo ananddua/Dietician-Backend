@@ -7,11 +7,11 @@
     "start": "node index.js",
     "dev": "node index.js"
   },
-  "authors": {
+  "authors": [
     "aman kapoor",
     "harshit ahuja",
     "anand dua"
-  },
+    ],
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.6",
